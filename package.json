@@ -1,0 +1,26 @@
+{
+  "name": "eventmonger",
+  "version": "1.0.0",
+  "description": "A dead simple event system",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc index.js -d docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixMo42/eventmonger.git"
+  },
+  "keywords": [
+    "events"
+  ],
+  "author": "FelixMo42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelixMo42/eventmonger/issues"
+  },
+  "homepage": "https://github.com/FelixMo42/eventmonger#readme",
+  "dependencies": {
+    "jsdoc": "^3.6.4"
+  }
+}
