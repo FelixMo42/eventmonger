@@ -1,4 +1,9 @@
 /**
+ * @callback EventCallback
+ * @param {*} data
+ */
+
+/**
  * Creates a new event
  * 
  * @function
@@ -20,8 +25,8 @@ export const fire = (event, data) => event.forEach(callback => callback(data))
  * 
  * @function
  * @param {Event} event 
- * @param {function} callback 
- * @returns {function} returns the callback
+ * @param {EventCallback} callback 
+ * @returns {EventCallback} returns the callback
  */
 export const on = (event, callback) => {
     event.add(callback)
@@ -34,8 +39,8 @@ export const on = (event, callback) => {
  * 
  * @function
  * @param {Event} event
- * @param {function} callback
- * @returns {function} returns the callback
+ * @param {EventCallback} callback
+ * @returns {EventCallback} returns the callback
  */
 export const off = (event, callback) => {
     event.delete(callback)
@@ -56,3 +61,21 @@ export const once = event => new Promise(resolve => {
         resolve(data)
     })
 })
+
+/**
+ * @callback Condition
+ * @param {*} data
+ * @returns {boolean}
+ */
+
+/**
+ * Makes a function only get called if parameter meets a condition
+ * 
+ * @function
+ * @param {Condition} condition 
+ * @param {EventCallback} callback 
+ * @returns {EventCallback} returns a new function
+ */
+export const when = (condition, callback) => (data) => {
+    if (condition(data)) callback(data)
+}
