@@ -1,8 +1,9 @@
 {
   "name": "eventmonger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A dead simple event system",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "doc": "jsdoc index.js -d docs",
     "test": "echo \"Error: no test specified\" && exit 1"
