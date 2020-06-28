@@ -20,7 +20,4 @@
     "url": "https://github.com/FelixMo42/eventmonger/issues"
   },
   "homepage": "https://github.com/FelixMo42/eventmonger#readme",
-  "dependencies": {
-    "jsdoc": "^3.6.4"
-  }
 }
