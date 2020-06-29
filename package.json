@@ -1,17 +1,17 @@
 {
   "name": "eventmonger",
-  "version": "3.2.2",
+  "version": "3.3.2",
   "description": "A dead simple event system",
   "main": "./lib/index.js",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./src/index.js",
+      "import": "./src/index.mjs",
       "require": "./lib/index.js"
     }
   },
   "scripts": {
-    "build": "babel --plugins @babel/plugin-transform-modules-commonjs src/index.js > lib/index.js",
+    "build": "babel --plugins @babel/plugin-transform-modules-commonjs src/index.mjs > lib/index.js",
     "prepublish": "npm run build"
   },
   "repository": {
