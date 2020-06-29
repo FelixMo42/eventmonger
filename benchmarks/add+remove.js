@@ -1,7 +1,7 @@
 import benchmark from "benchmark"
 import add from "./helper.js"
 
-import * as evemtmonger from "../index.js"
+import * as evemtmonger from "../src/index.js"
 import eventemitter3 from "eventemitter3"
 
 const Handler = () => () => {}

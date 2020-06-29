@@ -1,19 +1,20 @@
 {
   "name": "eventmonger",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "A dead simple event system",
-  "main": "index.js",
-  "type": "module",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "scripts": {
-    "doc": "jsdoc index.js -d docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel --plugins @babel/plugin-transform-modules-commonjs src/index.js > lib/index.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FelixMo42/eventmonger.git"
   },
   "files": [
-    "index.js/"
+    "src",
+    "lib"
   ],
   "keywords": [
     "events"
@@ -25,7 +26,9 @@
   },
   "homepage": "https://github.com/FelixMo42/eventmonger#readme",
   "devDependencies": {
-    "benchmark": "^2.1.4",
-    "eventemitter3": "^4.0.4"
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.1",
+    "benchmark": "^2.1.4"
   }
 }

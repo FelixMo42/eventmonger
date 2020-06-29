@@ -10,7 +10,6 @@ let sampleEvent = Event()
 let callback = name => console.log("hello ", name, "!")
 
 // register a callback on an event
-// note: a callback cant be registered multiple times to the same event
 // note: returns the callback
 on(sampleEvent, callback)
 
