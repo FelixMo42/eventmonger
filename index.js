@@ -9,7 +9,7 @@
  * @function
  * @returns {Event}
  */
-export const Event = () => new Set()
+export const Event = () => []
 
 /**
  * triggers all the callback on the event
@@ -29,7 +29,7 @@ export const fire = (event, data) => event.forEach(callback => callback(data))
  * @returns {EventCallback} returns the callback
  */
 export const on = (event, callback) => {
-    event.add(callback)
+    event.push(callback)
     
     return callback
 }
@@ -43,7 +43,17 @@ export const on = (event, callback) => {
  * @returns {EventCallback} returns the callback
  */
 export const off = (event, callback) => {
-    event.delete(callback)
+    let last = event.length - 1
+
+    for (let i = last; i >= 0; i--) {
+        if ( event[i] == callback ) {
+            event[i] = event[last]
+
+            event.pop()
+
+            return callback
+        }
+    }
 
     return callback
 }

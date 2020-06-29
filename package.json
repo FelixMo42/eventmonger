@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/FelixMo42/eventmonger.git"
   },
+  "files": [
+    "index.js/"
+  ],
   "keywords": [
     "events"
   ],
@@ -20,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/FelixMo42/eventmonger/issues"
   },
-  "homepage": "https://github.com/FelixMo42/eventmonger#readme"
+  "homepage": "https://github.com/FelixMo42/eventmonger#readme",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "eventemitter3": "^4.0.4"
+  }
 }
