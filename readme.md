@@ -3,7 +3,7 @@ EventMonger is a dead simple event system.
 I didnt like a lot of the syntax for classical event system, so presto.
 
 ```js
-var { Event, fire, on, off, once, when } = require('eventmonger')
+var { Event, fire, on, off, once, when, clear } = require('eventmonger')
 
 let sampleEvent = Event()
 
@@ -22,9 +22,13 @@ off(sampleEvent, callback)
 once(sampleEvent).then(data => console.log(data))
 
 // fire off the event!
-// note: event can only have one paramter
+// note: events can only have one paramter
 fire(sampleEvent, "world")
 
-// you can use when to filter a callback
+// you can use 'when' to filter a callback!
 on(samleEvent, when(name => name == "world", name => console.log("hello world"))
+
+// you can use clear, to well, clear all the callbacks from an Event
+// note: returns the event
+clear(samleEvent)
 ```

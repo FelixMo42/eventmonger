@@ -59,6 +59,18 @@ export const off = (event, callback) => {
 }
 
 /**
+ * clears all callbacks from an event
+ * 
+ * @param {Event} event 
+ * @returns {Event} return the event
+ */
+export const clear = (event) => {
+    event.length = 0
+
+    return event
+} 
+
+/**
  * retures a promise that will resolve the next time the event is fired
  * 
  * @function
