@@ -32,3 +32,8 @@ on(samleEvent, when(name => name == "world", name => console.log("hello world"))
 // note: returns the event
 clear(samleEvent)
 ```
+
+Weve even got come alias
+on == addListener
+off == removeListener
+clear = removeAllListeners

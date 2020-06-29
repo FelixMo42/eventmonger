@@ -33,6 +33,7 @@ export const on = (event, callback) => {
     
     return callback
 }
+export const addListener = on
 
 /**
  * removes a callback from an event
@@ -57,6 +58,7 @@ export const off = (event, callback) => {
 
     return callback
 }
+export const removeListener = off
 
 /**
  * clears all callbacks from an event
@@ -68,7 +70,9 @@ export const clear = (event) => {
     event.length = 0
 
     return event
-} 
+}
+export const removeAllListeners = clear
+
 
 /**
  * retures a promise that will resolve the next time the event is fired
