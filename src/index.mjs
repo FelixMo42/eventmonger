@@ -4,12 +4,26 @@
  */
 
 /**
+ * 
+ * @function
+ * @param {Event} event 
+ * @param {*} data 
+ */
+const baseFire = (event, data) => event.forEach(callback => callback(data))
+
+/**
  * Creates a new event
  * 
  * @function
  * @returns {Event}
  */
-export const Event = () => []
+export const Event = () => {
+    let event = []
+
+    event.fire = baseFire
+
+    return event
+}
 
 /**
  * triggers all the callback on the event
@@ -18,7 +32,8 @@ export const Event = () => []
  * @param {Event} event
  * @param {*} data
  */
-export const fire = (event, data) => event.forEach(callback => callback(data))
+export const fire = (event, data) => event.fire(event, data, baseFire)
+export const emit = fire
 
 /**
  * registers a callback to be triggered when then event is fired

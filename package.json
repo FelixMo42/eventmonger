@@ -1,6 +1,6 @@
 {
   "name": "eventmonger",
-  "version": "3.3.2",
+  "version": "4.0.0",
   "description": "A dead simple event system",
   "main": "./lib/index.js",
   "exports": {
