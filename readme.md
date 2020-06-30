@@ -29,7 +29,7 @@ on(samleEvent, when(name => name == "world", name => console.log("hello world"))
 
 // you can use clear, to well, clear all the callbacks from an Event
 // note: returns the event
-clear(samleEvent)
+clear(sampleEvent)
 ```
 
 Weve even got come alias
