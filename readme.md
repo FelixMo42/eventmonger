@@ -4,7 +4,7 @@ I didnt like a lot of the syntax for classical event system, so presto.
 
 ```js
 var { Event, fire, on, off, once, when, clear } = require('eventmonger')
-// of
+// or
 import { Event, fire, on, off, once, when, clear } from 'eventmonger'
 
 let sampleEvent = Event()
