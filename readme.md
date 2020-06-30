@@ -25,7 +25,7 @@ once(sampleEvent).then(data => console.log(data))
 fire(sampleEvent, "world")
 
 // you can use 'when' to filter a callback!
-on(samleEvent, when(name => name == "world", name => console.log("hello world"))
+on(sampleEvent, when(name => name == "world", name => console.log("hello world"))
 
 // you can use clear, to well, clear all the callbacks from an Event
 // note: returns the event
