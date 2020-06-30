@@ -33,6 +33,7 @@ clear(sampleEvent)
 ```
 
 Weve even got come alias
-on == addListener
-off == removeListener
-clear = removeAllListeners
+- on == addListener
+- off == removeListener
+- clear = removeAllListeners
+- fire == emit
