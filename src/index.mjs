@@ -9,7 +9,7 @@
  * @param {Event} event 
  * @param {*} data 
  */
-const baseFire = (event, data) => event.forEach(callback => callback(data))
+const baseFire = (data, event) => event.forEach(callback => callback(data))
 
 /**
  * Creates a new event
@@ -17,10 +17,10 @@ const baseFire = (event, data) => event.forEach(callback => callback(data))
  * @function
  * @returns {Event}
  */
-export const Event = () => {
+export const Event = (middleware) => {
     let event = []
 
-    event.fire = baseFire
+    event.fire = !!middleware ? middleware(event, data => baseFire(event, data)) : baseFire
 
     return event
 }
@@ -32,7 +32,7 @@ export const Event = () => {
  * @param {Event} event
  * @param {*} data
  */
-export const fire = (event, data) => event.fire(event, data, baseFire)
+export const fire = (event, data) => event.fire(data, event)
 export const emit = fire
 
 /**
