@@ -9,7 +9,7 @@
  * @function
  * @returns {Event}
  */
-export const Event = () => new Array()
+export const Event = () => []
 
 /**
  * triggers all the callback on the event
