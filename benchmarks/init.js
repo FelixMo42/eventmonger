@@ -1,35 +1,17 @@
-import benchmark from "benchmark"
-import add from "./helper.js"
+const [add, run] = require("./helper.js")()
 
-import * as evemtmonger from "../src/index.js"
-import eventemitter3 from "eventemitter3"
-
-//
-// This is used to prevent the functions below from being transformed into
-// noops.
-//
 var emitter;
 
-let suite = new benchmark.Suite()
-
-add(suite, `local`, () => {
+add("../lib/index", ({ Event }) => {
     return () => {
-        emitter = evemtmonger.Event()
+        emitter = Event()
     }
 })
 
-add(suite, `eventemitter3`, () => {
+add("eventemitter3", (ee) => {
     return () => {
-        emitter = eventemitter3.EventEmitter()
+        emitter = ee.EventEmitter()
     }
 })
 
-console.log(`\nString`)
-suite
-    .on('cycle', function cycle(e) {
-        console.log(e.target.toString())
-    })
-    .on('complete', function completed() {
-        console.log(`Fastest is ${this.filter('fastest').map('name')}`)
-    })
-    .run()
+run()

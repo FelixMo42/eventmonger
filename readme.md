@@ -4,6 +4,8 @@ I didnt like a lot of the syntax for classical event system, so presto.
 
 ```js
 var { Event, fire, on, off, once, when, clear } = require('eventmonger')
+// of
+import { Event, fire, on, off, once, when, clear } from 'eventmonger'
 
 let sampleEvent = Event()
 
@@ -32,8 +34,9 @@ on(sampleEvent, when(name => name == "world", name => console.log("hello world")
 clear(sampleEvent)
 ```
 
-Weve even got come alias
+We've even got come alias
 - on == addListener
 - off == removeListener
 - clear = removeAllListeners
 - fire == emit
+

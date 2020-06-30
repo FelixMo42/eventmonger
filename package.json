@@ -35,6 +35,7 @@
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
     "@babel/plugin-transform-modules-commonjs": "^7.10.1",
-    "benchmark": "^2.1.4"
+    "benchmark": "^2.1.4",
+    "eventemitter3": "^4.0.4"
   }
 }
