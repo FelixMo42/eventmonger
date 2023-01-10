@@ -32,10 +32,8 @@
   },
   "homepage": "https://github.com/FelixMo42/eventmonger#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.3",
-    "@babel/core": "^7.10.3",
-    "@babel/plugin-transform-modules-commonjs": "^7.10.1",
-    "benchmark": "^2.1.4",
-    "eventemitter3": "^4.0.4"
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11"
   }
 }
