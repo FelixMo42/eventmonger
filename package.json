@@ -1,6 +1,6 @@
 {
   "name": "eventmonger",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "A dead simple event system",
   "main": "./lib/index.js",
   "exports": {
@@ -11,7 +11,7 @@
     }
   },
   "scripts": {
-    "build": "babel --plugins @babel/plugin-transform-modules-commonjs src/index.mjs > lib/index.js",
+    "build": "esbuild src/index.ts > lib/index.js",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -32,8 +32,6 @@
   },
   "homepage": "https://github.com/FelixMo42/eventmonger#readme",
   "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/plugin-transform-modules-commonjs": "^7.20.11"
+    "esbuild": "0.19.5"
   }
 }
